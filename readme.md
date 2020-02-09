@@ -2,6 +2,7 @@
 
 ## dockerfile
 
+```
 FROM centos:8
 LABEL maintainer="yuichi1992"
 RUN dnf -y install vim
@@ -12,9 +13,11 @@ RUN systemctl enable mariadb
 RUN systemctl enable httpd
 EXPOSE 80
 CMD echo "now running..."
+```
 
 ## result
 
+```
 STEP 1: FROM centos:8
 STEP 2: LABEL maintainer="yuichi1992"
 --> Using cache 9eb932372ea667aabfdd146faa163181bc6dcdbc7c207c6f5886c8d7c7ff293a
@@ -671,3 +674,4 @@ STEP 17: FROM 26adad820d04b115992c0edf4334599cfc61b4451c21656577541f1dc3311cca
 STEP 18: CMD echo "now running..."
 --> 2fa3fad5848cf1fdde56abfcf9fe665b1524d491d6b7b6e158c090b83dc7e215
 STEP 19: COMMIT
+```
